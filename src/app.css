@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #87b5b5;
+    --secondary: #4aa3a3;
+}
+
+/* basic modern patch */
+textarea {
+    all: initial;
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
+.changeonhover:hover {
+    color: orange;
+}
