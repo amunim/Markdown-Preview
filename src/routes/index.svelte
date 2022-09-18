@@ -69,13 +69,9 @@ And here. | Okay. | I think we get it.
     <html lang="en" />
 </svelte:head>
 
-{#if showFull == 0}
-<Editor id="editor" bind:text onExpandCollapse={() => handleClick(1)}/>
-    <Preview id="preview" {markup} onExpandCollapse={() => handleClick(2)}/>
-{:else if showFull == 1}
+{#if showFull == 1 || showFull == 0}
 <Editor id="editor" bind:text compressed onExpandCollapse={() => handleClick(1)}/>
-{:else if showFull == 2}
+{/if}
+{#if showFull == 2 || showFull == 0}
 <Preview id="preview" {markup} compressed onExpandCollapse={() => handleClick(2)}/>
-{:else}
-An error occured!
 {/if}

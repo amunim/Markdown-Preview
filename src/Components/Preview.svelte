@@ -1,14 +1,7 @@
-<!-- <script lang="ts" context="module">
-    export enum Width {
-        lg = "lg",
-        xl = "xl",
-        twoxl = "2xl",
-    }
-</script> -->
 <script lang="ts">
     import Fa from "svelte-fa";
-    import { faFreeCodeCamp } from "@fortawesome/free-brands-svg-icons";
-    import { faArrowsAlt, faCompress } from "@fortawesome/free-solid-svg-icons";
+    import { faFreeCodeCamp } from "@fortawesome/free-brands-svg-icons/faFreeCodeCamp";
+    import { faCompress, faArrowsAlt } from "@fortawesome/free-solid-svg-icons";
 
     export let id: string;
     export let markup: string;
@@ -24,14 +17,14 @@
                 <h2 class=" font-bold ml-1">Previewer</h2>
 
                 <div class="ml-auto" on:click={() => onExpandCollapse()}>
-                    <Fa class="mt-1 hover:fill-orange-500 changeonhover" icon={(compressed ? faCompress: faArrowsAlt)} />
+                    <Fa
+                        class="mt-1 hover:fill-orange-500 changeonhover"
+                        icon={compressed ? faCompress : faArrowsAlt}
+                    />
                 </div>
             </div>
         </div>
-        <div
-            {id}
-            class="m-0 py-0 px-4 bg-highlightbg -mb-1 w-full border-b-2"
-        >
+        <div {id} class="m-0 py-0 px-4 bg-highlightbg -mb-1 w-full border-b-2">
             {@html markup}
         </div>
     </div>

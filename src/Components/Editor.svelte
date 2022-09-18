@@ -1,7 +1,9 @@
 <script lang="ts">
     import Fa from "svelte-fa";
-    import { faFreeCodeCamp } from "@fortawesome/free-brands-svg-icons";
-    import { faArrowsAlt, faCompress } from "@fortawesome/free-solid-svg-icons";
+    import {faFreeCodeCamp} from "@fortawesome/free-brands-svg-icons/faFreeCodeCamp";
+    // import { faArrowsAlt } from "@fortawesome/free-solid-svg-icons/faArrowsAlt";
+    // import  { faCompress } from "@fortawesome/free-solid-svg-icons/faCompress";
+    import { faCompress, faArrowsAlt } from "@fortawesome/free-solid-svg-icons";
 
     export let id: string;
     export let text: string;
